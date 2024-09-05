@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'chart/index'
-  resources :finances
   root "chart#index"
+  resources :finances
+  resources :products, only: %i[index new create]
   get "chart/index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
