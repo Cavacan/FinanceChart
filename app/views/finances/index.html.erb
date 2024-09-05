@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Finances</h1>
+
+<div id="finances">
+  <% @finances.each do |finance| %>
+    <%= render finance %>
+    <%= link_to "Show this finance", finance %>
+  <% end %>
+</div>
+
+<P><%= link_to "New finance", new_finance_path %></P>
+<P><%= link_to "Back to Chart", chart_index_path %></P>
